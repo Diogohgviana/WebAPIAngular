@@ -1,0 +1,21 @@
+<form class="fun-form" #funcionarioForm="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Nome" #Nome="ngModel" [(ngModel)]="funcionarioService.selectedFuncionario.Nome">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Sobrenome" #Sobrenome="ngModel" [(ngModel)]="funcionarioService.selectedFuncionario.Sobrenome">
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="Cargo" #Cargo="ngModel" [(ngModel)]="funcionarioService.selectedFuncionario.Cargo">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="CodFuncionario" #CodFuncionario="ngModel" [(ngModel)]="funcionarioService.selectedFuncionario.CodFuncionario">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Departamento" #Departamento="ngModel" [(ngModel)]="funcionarioService.selectedFuncionario.Departamento">
+    </div>
+  </div>
+</form>
