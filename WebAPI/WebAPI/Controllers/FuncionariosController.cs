@@ -22,28 +22,12 @@ namespace WebAPI.Controllers
             return db.Funcionarios;
         }
 
-        // GET: api/Funcionarios/5
-        [ResponseType(typeof(Funcionario))]
-        public IHttpActionResult GetFuncionario(int id)
-        {
-            Funcionario funcionario = db.Funcionarios.Find(id);
-            if (funcionario == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(funcionario);
-        }
-
+        
         // PUT: api/Funcionarios/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutFuncionario(int id, Funcionario funcionario)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
+            
             if (id != funcionario.IDFuncionario)
             {
                 return BadRequest();
@@ -74,11 +58,7 @@ namespace WebAPI.Controllers
         [ResponseType(typeof(Funcionario))]
         public IHttpActionResult PostFuncionario(Funcionario funcionario)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
+            
             db.Funcionarios.Add(funcionario);
             db.SaveChanges();
 
